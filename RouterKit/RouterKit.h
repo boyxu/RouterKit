@@ -6,7 +6,7 @@
 //  Copyright (c) 2015년 Jaehong Kang. All rights reserved.
 //
 
-#import <Cocoa/Cocoa.h>
+@import Foundation;
 
 //! Project version number for RouterKit.
 FOUNDATION_EXPORT double RouterKitVersionNumber;
@@ -16,4 +16,6 @@ FOUNDATION_EXPORT const unsigned char RouterKitVersionString[];
 
 // In this header, you should import all the public headers of your framework using statements like #import <RouterKit/PublicHeader.h>
 
-
+#import <RouterKit/RKDevice.h>
+#import <RouterKit/RKGenericDevice.h>
+#import <RouterKit/RKMobileDevice.h>
