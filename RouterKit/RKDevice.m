@@ -8,6 +8,41 @@
 
 #import "RKDevice_private.h"
 
+#include <netdb.h>
+
+#include <sys/sysctl.h>
+
+#include <arpa/inet.h>
+#include <ifaddrs.h>
+#include <netinet/in.h>
+
+#if TARGET_OS_IPHONE
+#include "if_ether.h"
+#else
+#include "netinet/if_ether.h"
+#endif
+
+#include <net/if.h>
+#include <net/if_dl.h>
+
+#if TARGET_OS_IPHONE
+#include "route.h"
+#else
+#include "net/route.h"
+#endif
+
+#if TARGET_OS_IPHONE
+#include "if_arp.h"
+#else
+#include "net/if_arp.h"
+#endif
+
+#include <CommonCrypto/CommonHMAC.h>
+
+#import "RKGenericDevice.h"
+
+@import SSKeychain;
+
 @implementation RKDevice
 
 @synthesize name;
@@ -26,14 +61,14 @@
         return nil;
     
     do {
-        if (routerDevice && ![routerDevice isKindOfClass:[GenericRouterDevice class]] && [[routerDevice uniqueIdentifierString] isEqualToString:uniqueIdentifierString])
+        if (routerDevice && ![routerDevice isKindOfClass:[RKGenericDevice class]] && [[routerDevice uniqueIdentifierString] isEqualToString:uniqueIdentifierString])
             break;
         
-        routerDevice = [MobileRouterDevice currentDevice];
-        if (routerDevice)
-            break;
+//        routerDevice = [MobileRouterDevice currentDevice];
+//        if (routerDevice)
+//            break;
         
-        routerDevice = [GenericRouterDevice currentDevice];
+        routerDevice = [RKGenericDevice currentDevice];
     } while (0);
     
     return routerDevice;
@@ -405,7 +440,7 @@
                 NSString *part;
                 id value;
                 value = [parameters objectForKey:key];
-                part = [NSString stringWithFormat:@"%@=%@", ([key isKindOfClass:[NSString class]] ? [key stringByAddingRFC3986PercentEscapesUsingEncoding:NSUTF8StringEncoding] : key), ([value isKindOfClass:[NSString class]] ? [value stringByAddingRFC3986PercentEscapesUsingEncoding:NSUTF8StringEncoding] : value)];
+                part = [NSString stringWithFormat:@"%@=%@", ([key isKindOfClass:[NSString class]] ? [key stringByAddingPercentEncodingWithAllowedCharacters:[NSCharacterSet URLQueryAllowedCharacterSet]] : key), ([value isKindOfClass:[NSString class]] ? [value stringByAddingPercentEncodingWithAllowedCharacters:[NSCharacterSet URLQueryAllowedCharacterSet]] : value)];
                 [parts addObject:part];
             }
         }
