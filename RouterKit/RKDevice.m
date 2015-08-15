@@ -84,13 +84,24 @@
 
 - (BOOL)setUser:(NSString *)user password:(NSString *)password
 {
-    [[SSKeychain accountsForService:[self keychainServiceName]] enumerateObjectsUsingBlock:^(NSDictionary *account, NSUInteger idx, BOOL *stop){
-        [SSKeychain deletePasswordForService:[self keychainServiceName] account:account[kSSKeychainAccountKey]];
+    SSKeychainQuery *query = [[SSKeychainQuery alloc] init];
+    query.service = [self keychainServiceName];
+    query.synchronizationMode = SSKeychainQuerySynchronizationModeNo;
+    
+    [[query fetchAll:nil] enumerateObjectsUsingBlock:^(NSDictionary *account, NSUInteger idx, BOOL *stop){
+        SSKeychainQuery *query = [[SSKeychainQuery alloc] init];
+        query.service = [self keychainServiceName];
+        query.account = account[kSSKeychainAccountKey];
+        query.synchronizationMode = SSKeychainQuerySynchronizationModeNo;
+        [query deleteItem:nil];
     }];
     
-    NSError *error;
-    
-    [SSKeychain setPassword:password forService:[self keychainServiceName] account:user error:&error];
+    query = [[SSKeychainQuery alloc] init];
+    query.service = [self keychainServiceName];
+    query.account = user;
+    query.password = password;
+    query.synchronizationMode = SSKeychainQuerySynchronizationModeNo;
+    [query save:nil];
     
     [self loadDeviceInformation];
     
@@ -115,9 +126,20 @@
     if ([self.uniqueIdentifierString isEqualToString:[[self class] getUniqueIdentifierString]]) {
         self.gatewayIPAddress = [[self class] getGatewayIPAddress];
         
-        self.username = [SSKeychain accountsForService:[self keychainServiceName]][0][kSSKeychainAccountKey];
+        SSKeychainQuery *query = [[SSKeychainQuery alloc] init];
+        query.service = [self keychainServiceName];
+        query.synchronizationMode = SSKeychainQuerySynchronizationModeNo;
+        
+        self.username = [query fetchAll:nil][0][kSSKeychainAccountKey];
+        
         if (self.username != nil) {
-            self.password = [SSKeychain passwordForService:[self keychainServiceName] account:self.username];
+            SSKeychainQuery *query = [[SSKeychainQuery alloc] init];
+            query.service = [self keychainServiceName];
+            query.account = self.username;
+            query.synchronizationMode = SSKeychainQuerySynchronizationModeNo;
+            [query fetch:nil];
+            
+            self.password = query.password;
         }
     }
 }
