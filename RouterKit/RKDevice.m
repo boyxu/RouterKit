@@ -103,10 +103,7 @@
         if ([NSUUID class])
             self.uniqueIdentifier = [[NSUUID alloc] initWithUUIDString:self.uniqueIdentifierString];
         
-        self.gatewayIPAddress = [[self class] getGatewayIPAddress];
-        
-        self.username = [SSKeychain accountsForService:[self keychainServiceName]][0][kSSKeychainAccountKey];
-        self.password = [SSKeychain passwordForService:[self keychainServiceName] account:self.username];
+        [self loadDeviceInformation];
     }
     return self;
 }
@@ -117,7 +114,9 @@
         self.gatewayIPAddress = [[self class] getGatewayIPAddress];
         
         self.username = [SSKeychain accountsForService:[self keychainServiceName]][0][kSSKeychainAccountKey];
-        self.password = [SSKeychain passwordForService:[self keychainServiceName] account:self.username];
+        if (self.username != nil) {
+            self.password = [SSKeychain passwordForService:[self keychainServiceName] account:self.username];
+        }
     }
 }
 
