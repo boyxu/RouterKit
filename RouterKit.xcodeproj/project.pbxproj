@@ -10,6 +10,9 @@
 		192C57251B7F0B8C00240688 /* RouterKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 192C57241B7F0B8C00240688 /* RouterKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		192C572B1B7F0B8C00240688 /* RouterKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 192C571F1B7F0B8C00240688 /* RouterKit.framework */; };
 		192C57321B7F0B8C00240688 /* RouterKitTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 192C57311B7F0B8C00240688 /* RouterKitTests.m */; };
+		199226E21B7F0C6100420C2C /* RKDevice.h in Headers */ = {isa = PBXBuildFile; fileRef = 199226E01B7F0C6100420C2C /* RKDevice.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		199226E31B7F0C6100420C2C /* RKDevice.m in Sources */ = {isa = PBXBuildFile; fileRef = 199226E11B7F0C6100420C2C /* RKDevice.m */; };
+		199226E51B7F0CCE00420C2C /* RKDevice_private.h in Headers */ = {isa = PBXBuildFile; fileRef = 199226E41B7F0CAB00420C2C /* RKDevice_private.h */; settings = {ATTRIBUTES = (Private, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,6 +32,9 @@
 		192C572A1B7F0B8C00240688 /* RouterKitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RouterKitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		192C57301B7F0B8C00240688 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		192C57311B7F0B8C00240688 /* RouterKitTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RouterKitTests.m; sourceTree = "<group>"; };
+		199226E01B7F0C6100420C2C /* RKDevice.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RKDevice.h; sourceTree = "<group>"; };
+		199226E11B7F0C6100420C2C /* RKDevice.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RKDevice.m; sourceTree = "<group>"; };
+		199226E41B7F0CAB00420C2C /* RKDevice_private.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RKDevice_private.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,6 +78,9 @@
 			isa = PBXGroup;
 			children = (
 				192C57241B7F0B8C00240688 /* RouterKit.h */,
+				199226E01B7F0C6100420C2C /* RKDevice.h */,
+				199226E41B7F0CAB00420C2C /* RKDevice_private.h */,
+				199226E11B7F0C6100420C2C /* RKDevice.m */,
 				192C57221B7F0B8C00240688 /* Supporting Files */,
 			);
 			path = RouterKit;
@@ -110,6 +119,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				192C57251B7F0B8C00240688 /* RouterKit.h in Headers */,
+				199226E21B7F0C6100420C2C /* RKDevice.h in Headers */,
+				199226E51B7F0CCE00420C2C /* RKDevice_private.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -209,6 +220,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				199226E31B7F0C6100420C2C /* RKDevice.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -399,6 +411,7 @@
 				192C57371B7F0B8C00240688 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		192C57381B7F0B8C00240688 /* Build configuration list for PBXNativeTarget "RouterKitTests" */ = {
 			isa = XCConfigurationList;
@@ -407,6 +420,7 @@
 				192C573A1B7F0B8C00240688 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
