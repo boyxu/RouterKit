@@ -83,4 +83,24 @@
     
 }
 
+- (NSArray *)availableWLANChannels
+{
+    return nil;
+}
+
+- (void)setAvailableWLANChannels:(NSArray *)availableWLANChannels
+{
+    
+}
+
+- (NSArray *)wlanChannels
+{
+    return nil;
+}
+
+- (void)setWlanChannels:(NSArray *)wlanChannels
+{
+    
+}
+
 @end

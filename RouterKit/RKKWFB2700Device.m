@@ -26,7 +26,7 @@
     if (response.statusCode != 200 || error)
         return nil;
     
-    NSDictionary *dictionary = [NSJSONSerialization JSONObjectWithData:[self fixJSONData:data] options:NULL error:&error];
+    NSDictionary *dictionary = [NSJSONSerialization JSONObjectWithData:[self fixJSONData:data] options:0 error:&error];
     
     if (error)
         return nil;
@@ -100,7 +100,7 @@
     if (response.statusCode != 200 || error)
         return nil;
     
-    NSDictionary *dictionary = [NSJSONSerialization JSONObjectWithData:[[self class] fixJSONData:data] options:NULL error:&error];
+    NSDictionary *dictionary = [NSJSONSerialization JSONObjectWithData:[[self class] fixJSONData:data] options:0 error:&error];
     
     if (error)
         return nil;
@@ -127,7 +127,7 @@
     if (response.statusCode != 200 || error)
         return nil;
     
-    NSDictionary *dictionary = [NSJSONSerialization JSONObjectWithData:[[self class] fixJSONData:data] options:NULL error:&error];
+    NSDictionary *dictionary = [NSJSONSerialization JSONObjectWithData:[[self class] fixJSONData:data] options:0 error:&error];
     
     if (error)
         return nil;
@@ -157,7 +157,7 @@
     if (response.statusCode != 200 || error)
         return nil;
     
-    NSDictionary *dictionary = [NSJSONSerialization JSONObjectWithData:[[self class] fixJSONData:data] options:NULL error:&error];
+    NSDictionary *dictionary = [NSJSONSerialization JSONObjectWithData:[[self class] fixJSONData:data] options:0 error:&error];
     
     if (error)
         return nil;
@@ -195,10 +195,10 @@
     
     NSMutableArray *connectedClients = [[NSMutableArray alloc] initWithCapacity:[connectedClientIndexSet count]];
     
-    [connectedClientIndexSet enumerateIndexesWithOptions:NULL usingBlock:^(NSUInteger idx, BOOL *stop){
-        NSString *nameKey = [NSString stringWithFormat:@"AD_NAME_%d", idx];
-        NSString *macKey = [NSString stringWithFormat:@"AD_MAC_%d", idx];
-        NSString *ipKey = [NSString stringWithFormat:@"AD_IP_%d", idx];
+    [connectedClientIndexSet enumerateIndexesWithOptions:0 usingBlock:^(NSUInteger idx, BOOL *stop){
+        NSString *nameKey = [NSString stringWithFormat:@"AD_NAME_%lu", (unsigned long)idx];
+        NSString *macKey = [NSString stringWithFormat:@"AD_MAC_%lu", (unsigned long)idx];
+        NSString *ipKey = [NSString stringWithFormat:@"AD_IP_%lu", (unsigned long)idx];
         
         NSString *name = dictionary[@"data"][nameKey];
         NSString *mac = dictionary[@"data"][macKey];
@@ -246,7 +246,7 @@
     [fixedString appendString:[string substringWithRange:NSMakeRange(offset,
                                                                      [string length] - offset)]];
     
-    [fixedString replaceOccurrencesOfString:@"\"dummy09\":'XX'" withString:@"\"dummy09\":\"XX\"" options:NULL range:NSMakeRange(0, fixedString.length)];
+    [fixedString replaceOccurrencesOfString:@"\"dummy09\":'XX'" withString:@"\"dummy09\":\"XX\"" options:0 range:NSMakeRange(0, fixedString.length)];
     
     return [fixedString dataUsingEncoding:NSUTF8StringEncoding];
 }
@@ -265,7 +265,7 @@
     if (response.statusCode != 200 || error)
         return nil;
     
-    NSDictionary *dictionary = [NSJSONSerialization JSONObjectWithData:[[self class] fixJSONData:data] options:NULL error:&error];
+    NSDictionary *dictionary = [NSJSONSerialization JSONObjectWithData:[[self class] fixJSONData:data] options:0 error:&error];
     
     if (error)
         return nil;
@@ -290,19 +290,19 @@
     NSData *data = [NSURLConnection sendSynchronousRequest:request returningResponse:&response error:&error];
     
     if (response.statusCode != 200 || error)
-        return nil;
+        return RKDeviceWiFiPHYModeUnknown;
     
-    NSDictionary *dictionary = [NSJSONSerialization JSONObjectWithData:[[self class] fixJSONData:data] options:NULL error:&error];
+    NSDictionary *dictionary = [NSJSONSerialization JSONObjectWithData:[[self class] fixJSONData:data] options:0 error:&error];
     
     if (error)
-        return nil;
+        return RKDeviceWiFiPHYModeUnknown;
     
     if (!dictionary[@"result"])
-        return nil;
+        return RKDeviceWiFiPHYModeUnknown;
     else if ([dictionary[@"result"] isKindOfClass:[NSNumber class]] && ![dictionary[@"result"] isEqualToNumber:@(0)])
-        return nil;
+        return RKDeviceWiFiPHYModeUnknown;
     else if ([dictionary[@"result"] isKindOfClass:[NSString class]] && ![dictionary[@"result"] isEqualToString:@"0"])
-        return nil;
+        return RKDeviceWiFiPHYModeUnknown;
     
     RKDeviceWiFiPHYMode type = 0;
     
@@ -328,7 +328,7 @@
     if (response.statusCode != 200 || error)
         return RKDeviceWiFiSecurityModeNone;
     
-    NSDictionary *dictionary = [NSJSONSerialization JSONObjectWithData:[[self class] fixJSONData:data] options:NULL error:&error];
+    NSDictionary *dictionary = [NSJSONSerialization JSONObjectWithData:[[self class] fixJSONData:data] options:0 error:&error];
     
     if (error)
         return RKDeviceWiFiSecurityModeNone;
@@ -362,7 +362,7 @@
     if (response.statusCode != 200 || error)
         return nil;
     
-    NSDictionary *dictionary = [NSJSONSerialization JSONObjectWithData:[[self class] fixJSONData:data] options:NULL error:&error];
+    NSDictionary *dictionary = [NSJSONSerialization JSONObjectWithData:[[self class] fixJSONData:data] options:0 error:&error];
     
     if (error)
         return nil;
@@ -397,7 +397,7 @@
     if (response.statusCode != 200 || error)
         return 0;
     
-    NSDictionary *dictionary = [NSJSONSerialization JSONObjectWithData:[[self class] fixJSONData:data] options:NULL error:&error];
+    NSDictionary *dictionary = [NSJSONSerialization JSONObjectWithData:[[self class] fixJSONData:data] options:0 error:&error];
     
     if (error)
         return 0;
@@ -455,7 +455,7 @@
     if (response.statusCode != 200 || error)
         return RKDeviceWiFiSignalStrengthUnknown;
     
-    NSDictionary *dictionary = [NSJSONSerialization JSONObjectWithData:[[self class] fixJSONData:data] options:NULL error:&error];
+    NSDictionary *dictionary = [NSJSONSerialization JSONObjectWithData:[[self class] fixJSONData:data] options:0 error:&error];
     
     if (error)
         return RKDeviceWiFiSignalStrengthUnknown;
@@ -507,7 +507,7 @@
     if (response.statusCode != 200 || error)
         return RKMobileDeviceBatteryStateUnknown;
     
-    NSDictionary *dictionary = [NSJSONSerialization JSONObjectWithData:[[self class] fixJSONData:data] options:NULL error:&error];
+    NSDictionary *dictionary = [NSJSONSerialization JSONObjectWithData:[[self class] fixJSONData:data] options:0 error:&error];
     
     if (error)
         return RKMobileDeviceBatteryStateUnknown;
@@ -539,7 +539,7 @@
     if (response.statusCode != 200 || error)
         return -1.0;
     
-    NSDictionary *dictionary = [NSJSONSerialization JSONObjectWithData:[[self class] fixJSONData:data] options:NULL error:&error];
+    NSDictionary *dictionary = [NSJSONSerialization JSONObjectWithData:[[self class] fixJSONData:data] options:0 error:&error];
     
     if (error)
         return -1.0;
@@ -576,19 +576,19 @@
     NSData *data = [NSURLConnection sendSynchronousRequest:request returningResponse:&response error:&error];
     
     if (response.statusCode != 200 || error)
-        return nil;
+        return NSIntegerMin;
     
-    NSDictionary *dictionary = [NSJSONSerialization JSONObjectWithData:[[self class] fixJSONData:data] options:NULL error:&error];
+    NSDictionary *dictionary = [NSJSONSerialization JSONObjectWithData:[[self class] fixJSONData:data] options:0 error:&error];
     
     if (error)
-        return nil;
+        return NSIntegerMin;
     
     if (!dictionary[@"result"])
-        return nil;
+        return NSIntegerMin;
     else if ([dictionary[@"result"] isKindOfClass:[NSNumber class]] && ![dictionary[@"result"] isEqualToNumber:@(0)])
-        return nil;
+        return NSIntegerMin;
     else if ([dictionary[@"result"] isKindOfClass:[NSString class]] && ![dictionary[@"result"] isEqualToString:@"0"])
-        return nil;
+        return NSIntegerMin;
     
     NSNumberFormatter *formatter = [[NSNumberFormatter alloc] init];
     formatter.numberStyle = NSNumberFormatterDecimalStyle;
@@ -606,19 +606,19 @@
     NSData *data = [NSURLConnection sendSynchronousRequest:request returningResponse:&response error:&error];
     
     if (response.statusCode != 200 || error)
-        return nil;
+        return NSIntegerMin;
     
-    NSDictionary *dictionary = [NSJSONSerialization JSONObjectWithData:[[self class] fixJSONData:data] options:NULL error:&error];
+    NSDictionary *dictionary = [NSJSONSerialization JSONObjectWithData:[[self class] fixJSONData:data] options:0 error:&error];
     
     if (error)
-        return nil;
+        return NSIntegerMin;
     
     if (!dictionary[@"result"])
-        return nil;
+        return NSIntegerMin;
     else if ([dictionary[@"result"] isKindOfClass:[NSNumber class]] && ![dictionary[@"result"] isEqualToNumber:@(0)])
-        return nil;
+        return NSIntegerMin;
     else if ([dictionary[@"result"] isKindOfClass:[NSString class]] && ![dictionary[@"result"] isEqualToString:@"0"])
-        return nil;
+        return NSIntegerMin;
     
     NSNumberFormatter *formatter = [[NSNumberFormatter alloc] init];
     formatter.numberStyle = NSNumberFormatterDecimalStyle;

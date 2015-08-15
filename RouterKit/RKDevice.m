@@ -8,6 +8,8 @@
 
 #import "RKDevice_private.h"
 
+#include <err.h>
+
 #include <netdb.h>
 
 #include <sys/sysctl.h>

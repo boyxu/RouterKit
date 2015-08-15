@@ -29,7 +29,7 @@
     NSString *htmlString = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
     
     NSRegularExpression *regularExpression = [[NSRegularExpression alloc] initWithPattern:@"<td .*>모델명<\\/td>\\r?\\n+\\s*<td .*>(.+)&nbsp;<\\/td>" options:(NSRegularExpressionUseUnixLineSeparators) error:&error];
-    NSTextCheckingResult *textCheckingResult = [regularExpression firstMatchInString:htmlString options:NULL range:NSMakeRange(0, htmlString.length)];
+    NSTextCheckingResult *textCheckingResult = [regularExpression firstMatchInString:htmlString options:0 range:NSMakeRange(0, htmlString.length)];
     
     NSString *modelName = [htmlString substringWithRange:[textCheckingResult rangeAtIndex:(textCheckingResult.numberOfRanges - 1)]];
     
@@ -102,7 +102,7 @@
     NSString *htmlString = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
     
     NSRegularExpression *regularExpression = [[NSRegularExpression alloc] initWithPattern:@"<td .*id=\"SWVersion\">(.+)&nbsp;<\\/td>" options:(NSRegularExpressionUseUnixLineSeparators) error:&error];
-    NSTextCheckingResult *textCheckingResult = [regularExpression firstMatchInString:htmlString options:NULL range:NSMakeRange(0, htmlString.length)];
+    NSTextCheckingResult *textCheckingResult = [regularExpression firstMatchInString:htmlString options:0 range:NSMakeRange(0, htmlString.length)];
     
     NSString *systemVersion = [htmlString substringWithRange:[textCheckingResult rangeAtIndex:(textCheckingResult.numberOfRanges - 1)]];
     
@@ -132,7 +132,7 @@
     htmlString = [htmlString stringByReplacingOccurrencesOfString:@"\n" withString:@""];
     
     NSRegularExpression *regularExpression = [[NSRegularExpression alloc] initWithPattern:@"window.parent.callback_SetWiMAXInfo\\( (.+) \\);" options:(NSRegularExpressionUseUnixLineSeparators) error:&error];
-    NSTextCheckingResult *textCheckingResult = [regularExpression firstMatchInString:htmlString options:NULL range:NSMakeRange(0, htmlString.length)];
+    NSTextCheckingResult *textCheckingResult = [regularExpression firstMatchInString:htmlString options:0 range:NSMakeRange(0, htmlString.length)];
     
     NSString *wimaxInfoJSONString = [htmlString substringWithRange:[textCheckingResult rangeAtIndex:(textCheckingResult.numberOfRanges - 1)]];
     
@@ -142,7 +142,7 @@
     if (!wimaxInfoJSONString)
         return nil;
     
-    NSArray *wimaxInfoArray = [NSJSONSerialization JSONObjectWithData:[wimaxInfoJSONString dataUsingEncoding:NSUTF8StringEncoding] options:NULL error:&error];
+    NSArray *wimaxInfoArray = [NSJSONSerialization JSONObjectWithData:[wimaxInfoJSONString dataUsingEncoding:NSUTF8StringEncoding] options:0 error:&error];
     
     if (error)
         return nil;
@@ -171,7 +171,7 @@
     NSString *htmlString = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
     
     NSRegularExpression *regularExpression = [[NSRegularExpression alloc] initWithPattern:@"<tr><td .*>(.+)<\\/td><td .*>.+<\\/td><td .*>.+<\\/td><\\/tr>" options:(NSRegularExpressionUseUnixLineSeparators) error:&error];
-    NSArray *textCheckingResults = [regularExpression matchesInString:htmlString options:NULL range:NSMakeRange(0, htmlString.length)];
+    NSArray *textCheckingResults = [regularExpression matchesInString:htmlString options:0 range:NSMakeRange(0, htmlString.length)];
     
     NSLog(@"%@", error);
     NSLog(@"%@", textCheckingResults);
@@ -204,33 +204,33 @@
     NSData *data = [NSURLConnection sendSynchronousRequest:request returningResponse:&response error:&error];
     
     if (response.statusCode != 200 || error)
-        return nil;
+        return NSIntegerMin;
     
     NSString *htmlString = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
     
     htmlString = [htmlString stringByReplacingOccurrencesOfString:@"\n" withString:@""];
     
     NSRegularExpression *regularExpression = [[NSRegularExpression alloc] initWithPattern:@"window.parent.callback_SetWiMAXInfo\\( (.+) \\);" options:(NSRegularExpressionUseUnixLineSeparators) error:&error];
-    NSTextCheckingResult *textCheckingResult = [regularExpression firstMatchInString:htmlString options:NULL range:NSMakeRange(0, htmlString.length)];
+    NSTextCheckingResult *textCheckingResult = [regularExpression firstMatchInString:htmlString options:0 range:NSMakeRange(0, htmlString.length)];
     
     NSString *wimaxInfoJSONString = [htmlString substringWithRange:[textCheckingResult rangeAtIndex:(textCheckingResult.numberOfRanges - 1)]];
     
     if (error)
-        return nil;
+        return NSIntegerMin;
     
     if (!wimaxInfoJSONString)
-        return nil;
+        return NSIntegerMin;
     
-    NSArray *wimaxInfoArray = [NSJSONSerialization JSONObjectWithData:[wimaxInfoJSONString dataUsingEncoding:NSUTF8StringEncoding] options:NULL error:&error];
+    NSArray *wimaxInfoArray = [NSJSONSerialization JSONObjectWithData:[wimaxInfoJSONString dataUsingEncoding:NSUTF8StringEncoding] options:0 error:&error];
     
     if (error)
-        return nil;
+        return NSIntegerMin;
     
     if (!wimaxInfoArray)
-        return nil;
+        return NSIntegerMin;
     
     if ([wimaxInfoArray count] != 11)
-        return nil;
+        return NSIntegerMin;
     
     NSArray *cinrAndRSSI = [wimaxInfoArray[10] componentsSeparatedByString:@" / "];
     
@@ -250,33 +250,33 @@
     NSData *data = [NSURLConnection sendSynchronousRequest:request returningResponse:&response error:&error];
     
     if (response.statusCode != 200 || error)
-        return nil;
+        return NSIntegerMin;
     
     NSString *htmlString = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
     
     htmlString = [htmlString stringByReplacingOccurrencesOfString:@"\n" withString:@""];
     
     NSRegularExpression *regularExpression = [[NSRegularExpression alloc] initWithPattern:@"window.parent.callback_SetWiMAXInfo\\( (.+) \\);" options:(NSRegularExpressionUseUnixLineSeparators) error:&error];
-    NSTextCheckingResult *textCheckingResult = [regularExpression firstMatchInString:htmlString options:NULL range:NSMakeRange(0, htmlString.length)];
+    NSTextCheckingResult *textCheckingResult = [regularExpression firstMatchInString:htmlString options:0 range:NSMakeRange(0, htmlString.length)];
     
     NSString *wimaxInfoJSONString = [htmlString substringWithRange:[textCheckingResult rangeAtIndex:(textCheckingResult.numberOfRanges - 1)]];
     
     if (error)
-        return nil;
+        return NSIntegerMin;
     
     if (!wimaxInfoJSONString)
-        return nil;
+        return NSIntegerMin;
     
-    NSArray *wimaxInfoArray = [NSJSONSerialization JSONObjectWithData:[wimaxInfoJSONString dataUsingEncoding:NSUTF8StringEncoding] options:NULL error:&error];
+    NSArray *wimaxInfoArray = [NSJSONSerialization JSONObjectWithData:[wimaxInfoJSONString dataUsingEncoding:NSUTF8StringEncoding] options:0 error:&error];
     
     if (error)
-        return nil;
+        return NSIntegerMin;
     
     if (!wimaxInfoArray)
-        return nil;
+        return NSIntegerMin;
     
     if ([wimaxInfoArray count] != 11)
-        return nil;
+        return NSIntegerMin;
     
     NSArray *cinrAndRSSI = [wimaxInfoArray[10] componentsSeparatedByString:@" / "];
     
@@ -305,7 +305,7 @@
     if (error)
         return nil;
     
-    NSTextCheckingResult *textCheckingResult = [regularExpression firstMatchInString:htmlString options:NULL range:NSMakeRange(0, htmlString.length)];
+    NSTextCheckingResult *textCheckingResult = [regularExpression firstMatchInString:htmlString options:0 range:NSMakeRange(0, htmlString.length)];
     
     if (!textCheckingResult)
         return nil;
