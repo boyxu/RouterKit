@@ -40,6 +40,7 @@
 #include <CommonCrypto/CommonHMAC.h>
 
 #import "RKGenericDevice.h"
+#import "RKMobileDevice.h"
 
 @import SSKeychain;
 
@@ -64,9 +65,9 @@
         if (routerDevice && ![routerDevice isKindOfClass:[RKGenericDevice class]] && [[routerDevice uniqueIdentifierString] isEqualToString:uniqueIdentifierString])
             break;
         
-//        routerDevice = [MobileRouterDevice currentDevice];
-//        if (routerDevice)
-//            break;
+        routerDevice = [RKMobileDevice currentDevice];
+        if (routerDevice)
+            break;
         
         routerDevice = [RKGenericDevice currentDevice];
     } while (0);

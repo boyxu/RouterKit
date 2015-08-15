@@ -1141,6 +1141,7 @@
 				199227161B7F0EAB00420C2C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		199227171B7F0EAB00420C2C /* Build configuration list for PBXNativeTarget "RouterKit-MacTests" */ = {
 			isa = XCConfigurationList;
@@ -1149,6 +1150,7 @@
 				199227191B7F0EAB00420C2C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		199227321B7F0EB500420C2C /* Build configuration list for PBXNativeTarget "RouterKit-iOS" */ = {
 			isa = XCConfigurationList;
@@ -1157,6 +1159,7 @@
 				199227341B7F0EB500420C2C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		199227351B7F0EB500420C2C /* Build configuration list for PBXNativeTarget "RouterKit-iOSTests" */ = {
 			isa = XCConfigurationList;
@@ -1165,6 +1168,7 @@
 				199227371B7F0EB500420C2C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		199227941B7F19FE00420C2C /* Build configuration list for PBXNativeTarget "RouterKit-Static-iOS" */ = {
 			isa = XCConfigurationList;
@@ -1173,6 +1177,7 @@
 				199227961B7F19FE00420C2C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		199227971B7F19FE00420C2C /* Build configuration list for PBXNativeTarget "RouterKit-Static-iOSTests" */ = {
 			isa = XCConfigurationList;
@@ -1181,6 +1186,7 @@
 				199227991B7F19FE00420C2C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
