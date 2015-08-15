@@ -22,7 +22,7 @@
 		199227421B7F0F1500420C2C /* SSKeychain.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 199226F01B7F0DCA00420C2C /* SSKeychain.framework */; };
 		199227451B7F0F1C00420C2C /* SSKeychain.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 199226F01B7F0DCA00420C2C /* SSKeychain.framework */; };
 		199227481B7F0F6000420C2C /* RKGenericDevice.h in Headers */ = {isa = PBXBuildFile; fileRef = 199227461B7F0F6000420C2C /* RKGenericDevice.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		199227491B7F0F6000420C2C /* RKGenericDevice.h in Headers */ = {isa = PBXBuildFile; fileRef = 199227461B7F0F6000420C2C /* RKGenericDevice.h */; };
+		199227491B7F0F6000420C2C /* RKGenericDevice.h in Headers */ = {isa = PBXBuildFile; fileRef = 199227461B7F0F6000420C2C /* RKGenericDevice.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		1992274A1B7F0F6000420C2C /* RKGenericDevice.m in Sources */ = {isa = PBXBuildFile; fileRef = 199227471B7F0F6000420C2C /* RKGenericDevice.m */; };
 		1992274B1B7F0F6000420C2C /* RKGenericDevice.m in Sources */ = {isa = PBXBuildFile; fileRef = 199227471B7F0F6000420C2C /* RKGenericDevice.m */; };
 		199227531B7F106200420C2C /* route.h in Headers */ = {isa = PBXBuildFile; fileRef = 1992274F1B7F106200420C2C /* route.h */; settings = {ATTRIBUTES = (Private, ); }; };
@@ -30,11 +30,11 @@
 		199227551B7F106200420C2C /* if_types.h in Headers */ = {isa = PBXBuildFile; fileRef = 199227511B7F106200420C2C /* if_types.h */; settings = {ATTRIBUTES = (Private, ); }; };
 		199227561B7F106200420C2C /* if_ether.h in Headers */ = {isa = PBXBuildFile; fileRef = 199227521B7F106200420C2C /* if_ether.h */; settings = {ATTRIBUTES = (Private, ); }; };
 		199227591B7F11C000420C2C /* RKMobileDevice.h in Headers */ = {isa = PBXBuildFile; fileRef = 199227571B7F11C000420C2C /* RKMobileDevice.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		1992275A1B7F11C000420C2C /* RKMobileDevice.h in Headers */ = {isa = PBXBuildFile; fileRef = 199227571B7F11C000420C2C /* RKMobileDevice.h */; };
+		1992275A1B7F11C000420C2C /* RKMobileDevice.h in Headers */ = {isa = PBXBuildFile; fileRef = 199227571B7F11C000420C2C /* RKMobileDevice.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		1992275B1B7F11C000420C2C /* RKMobileDevice.m in Sources */ = {isa = PBXBuildFile; fileRef = 199227581B7F11C000420C2C /* RKMobileDevice.m */; };
 		1992275C1B7F11C000420C2C /* RKMobileDevice.m in Sources */ = {isa = PBXBuildFile; fileRef = 199227581B7F11C000420C2C /* RKMobileDevice.m */; };
 		1992275F1B7F127000420C2C /* RKDevice+WiFi.h in Headers */ = {isa = PBXBuildFile; fileRef = 1992275D1B7F127000420C2C /* RKDevice+WiFi.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		199227601B7F127000420C2C /* RKDevice+WiFi.h in Headers */ = {isa = PBXBuildFile; fileRef = 1992275D1B7F127000420C2C /* RKDevice+WiFi.h */; };
+		199227601B7F127000420C2C /* RKDevice+WiFi.h in Headers */ = {isa = PBXBuildFile; fileRef = 1992275D1B7F127000420C2C /* RKDevice+WiFi.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		199227611B7F127000420C2C /* RKDevice+WiFi.m in Sources */ = {isa = PBXBuildFile; fileRef = 1992275E1B7F127000420C2C /* RKDevice+WiFi.m */; };
 		199227621B7F127000420C2C /* RKDevice+WiFi.m in Sources */ = {isa = PBXBuildFile; fileRef = 1992275E1B7F127000420C2C /* RKDevice+WiFi.m */; };
 		199227651B7F137B00420C2C /* RKKWDB2600Device.h in Headers */ = {isa = PBXBuildFile; fileRef = 199227631B7F137B00420C2C /* RKKWDB2600Device.h */; };
@@ -47,12 +47,33 @@
 		199227711B7F14A300420C2C /* RKKWFB2700Device.h in Headers */ = {isa = PBXBuildFile; fileRef = 1992276E1B7F14A300420C2C /* RKKWFB2700Device.h */; };
 		199227721B7F14A300420C2C /* RKKWFB2700Device.m in Sources */ = {isa = PBXBuildFile; fileRef = 1992276F1B7F14A300420C2C /* RKKWFB2700Device.m */; };
 		199227731B7F14A300420C2C /* RKKWFB2700Device.m in Sources */ = {isa = PBXBuildFile; fileRef = 1992276F1B7F14A300420C2C /* RKKWFB2700Device.m */; };
-		199227761B7F15DE00420C2C /* RKWLANChannel.h in Headers */ = {isa = PBXBuildFile; fileRef = 199227741B7F15DE00420C2C /* RKWLANChannel.h */; };
-		199227771B7F15DE00420C2C /* RKWLANChannel.h in Headers */ = {isa = PBXBuildFile; fileRef = 199227741B7F15DE00420C2C /* RKWLANChannel.h */; };
+		199227761B7F15DE00420C2C /* RKWLANChannel.h in Headers */ = {isa = PBXBuildFile; fileRef = 199227741B7F15DE00420C2C /* RKWLANChannel.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		199227771B7F15DE00420C2C /* RKWLANChannel.h in Headers */ = {isa = PBXBuildFile; fileRef = 199227741B7F15DE00420C2C /* RKWLANChannel.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		199227781B7F15DE00420C2C /* RKWLANChannel.m in Sources */ = {isa = PBXBuildFile; fileRef = 199227751B7F15DE00420C2C /* RKWLANChannel.m */; };
 		199227791B7F15DE00420C2C /* RKWLANChannel.m in Sources */ = {isa = PBXBuildFile; fileRef = 199227751B7F15DE00420C2C /* RKWLANChannel.m */; };
 		1992277D1B7F177E00420C2C /* RouterKitTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1992277C1B7F177E00420C2C /* RouterKitTests.m */; };
 		1992277E1B7F177E00420C2C /* RouterKitTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1992277C1B7F177E00420C2C /* RouterKitTests.m */; };
+		1992278E1B7F19FE00420C2C /* libRouterKit-Static-iOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 199227831B7F19FE00420C2C /* libRouterKit-Static-iOS.a */; };
+		1992279A1B7F1A1D00420C2C /* RKDevice.m in Sources */ = {isa = PBXBuildFile; fileRef = 199226E11B7F0C6100420C2C /* RKDevice.m */; };
+		1992279B1B7F1A2300420C2C /* RKGenericDevice.m in Sources */ = {isa = PBXBuildFile; fileRef = 199227471B7F0F6000420C2C /* RKGenericDevice.m */; };
+		1992279C1B7F1A2300420C2C /* RKDevice+WiFi.m in Sources */ = {isa = PBXBuildFile; fileRef = 1992275E1B7F127000420C2C /* RKDevice+WiFi.m */; };
+		1992279D1B7F1A2300420C2C /* RKWLANChannel.m in Sources */ = {isa = PBXBuildFile; fileRef = 199227751B7F15DE00420C2C /* RKWLANChannel.m */; };
+		1992279E1B7F1A2300420C2C /* RKMobileDevice.m in Sources */ = {isa = PBXBuildFile; fileRef = 199227581B7F11C000420C2C /* RKMobileDevice.m */; };
+		1992279F1B7F1A2300420C2C /* RKKWDB2600Device.m in Sources */ = {isa = PBXBuildFile; fileRef = 199227641B7F137B00420C2C /* RKKWDB2600Device.m */; };
+		199227A01B7F1A2300420C2C /* RKKWFB2700Device.m in Sources */ = {isa = PBXBuildFile; fileRef = 1992276F1B7F14A300420C2C /* RKKWFB2700Device.m */; };
+		199227A21B7F1A4D00420C2C /* RouterKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 192C57241B7F0B8C00240688 /* RouterKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		199227A31B7F1A4D00420C2C /* RKDevice.h in Headers */ = {isa = PBXBuildFile; fileRef = 199226E01B7F0C6100420C2C /* RKDevice.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		199227A41B7F1A4D00420C2C /* RKGenericDevice.h in Headers */ = {isa = PBXBuildFile; fileRef = 199227461B7F0F6000420C2C /* RKGenericDevice.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		199227A51B7F1A4D00420C2C /* RKDevice+WiFi.h in Headers */ = {isa = PBXBuildFile; fileRef = 1992275D1B7F127000420C2C /* RKDevice+WiFi.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		199227A61B7F1A4D00420C2C /* RKWLANChannel.h in Headers */ = {isa = PBXBuildFile; fileRef = 199227741B7F15DE00420C2C /* RKWLANChannel.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		199227A71B7F1A4D00420C2C /* RKMobileDevice.h in Headers */ = {isa = PBXBuildFile; fileRef = 199227571B7F11C000420C2C /* RKMobileDevice.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		199227A81B7F1A6B00420C2C /* RKWLANChannel_private.h in Headers */ = {isa = PBXBuildFile; fileRef = 1992277A1B7F162500420C2C /* RKWLANChannel_private.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		199227A91B7F1A6C00420C2C /* RKWLANChannel_private.h in Headers */ = {isa = PBXBuildFile; fileRef = 1992277A1B7F162500420C2C /* RKWLANChannel_private.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		199227AA1B7F1A7300420C2C /* RKDevice_private.h in Headers */ = {isa = PBXBuildFile; fileRef = 199226E41B7F0CAB00420C2C /* RKDevice_private.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		199227AB1B7F1A7300420C2C /* RKWLANChannel_private.h in Headers */ = {isa = PBXBuildFile; fileRef = 1992277A1B7F162500420C2C /* RKWLANChannel_private.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		199227AC1B7F1A7300420C2C /* RKMobileDevice_private.h in Headers */ = {isa = PBXBuildFile; fileRef = 199227691B7F13DD00420C2C /* RKMobileDevice_private.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		199227AD1B7F1A7800420C2C /* RKKWDB2600Device.h in Headers */ = {isa = PBXBuildFile; fileRef = 199227631B7F137B00420C2C /* RKKWDB2600Device.h */; };
+		199227AE1B7F1A7800420C2C /* RKKWFB2700Device.h in Headers */ = {isa = PBXBuildFile; fileRef = 1992276E1B7F14A300420C2C /* RKKWFB2700Device.h */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -112,6 +133,13 @@
 			remoteGlobalIDString = E8A666331A844CC400287CA3;
 			remoteInfo = "SSKeychain iOS";
 		};
+		1992278F1B7F19FE00420C2C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 192C57161B7F0B8C00240688 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 199227821B7F19FE00420C2C;
+			remoteInfo = "RouterKit-Static-iOS";
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
@@ -149,6 +177,9 @@
 		199227751B7F15DE00420C2C /* RKWLANChannel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RKWLANChannel.m; sourceTree = "<group>"; };
 		1992277A1B7F162500420C2C /* RKWLANChannel_private.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RKWLANChannel_private.h; sourceTree = "<group>"; };
 		1992277C1B7F177E00420C2C /* RouterKitTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RouterKitTests.m; sourceTree = "<group>"; };
+		199227831B7F19FE00420C2C /* libRouterKit-Static-iOS.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libRouterKit-Static-iOS.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		1992278D1B7F19FE00420C2C /* RouterKit-Static-iOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "RouterKit-Static-iOSTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		199227931B7F19FE00420C2C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -184,6 +215,21 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		199227801B7F19FE00420C2C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1992278A1B7F19FE00420C2C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1992278E1B7F19FE00420C2C /* libRouterKit-Static-iOS.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -196,6 +242,7 @@
 				1992270F1B7F0EAB00420C2C /* RouterKit-MacTests */,
 				199227201B7F0EB400420C2C /* RouterKit-iOS */,
 				1992272D1B7F0EB500420C2C /* RouterKit-iOSTests */,
+				199227911B7F19FE00420C2C /* RouterKit-Static-iOSTests */,
 				199226E71B7F0D8600420C2C /* Frameworks */,
 				192C57201B7F0B8C00240688 /* Products */,
 			);
@@ -208,6 +255,8 @@
 				1992270B1B7F0EAB00420C2C /* RouterKit-MacTests.xctest */,
 				1992271F1B7F0EB400420C2C /* RouterKit.framework */,
 				199227291B7F0EB400420C2C /* RouterKit-iOSTests.xctest */,
+				199227831B7F19FE00420C2C /* libRouterKit-Static-iOS.a */,
+				1992278D1B7F19FE00420C2C /* RouterKit-Static-iOSTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -358,6 +407,22 @@
 			path = RouterKitTests;
 			sourceTree = "<group>";
 		};
+		199227911B7F19FE00420C2C /* RouterKit-Static-iOSTests */ = {
+			isa = PBXGroup;
+			children = (
+				199227921B7F19FE00420C2C /* Supporting Files */,
+			);
+			path = "RouterKit-Static-iOSTests";
+			sourceTree = "<group>";
+		};
+		199227921B7F19FE00420C2C /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				199227931B7F19FE00420C2C /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -366,6 +431,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				199227381B7F0EF600420C2C /* RouterKit.h in Headers */,
+				199227A91B7F1A6C00420C2C /* RKWLANChannel_private.h in Headers */,
 				199227761B7F15DE00420C2C /* RKWLANChannel.h in Headers */,
 				199227481B7F0F6000420C2C /* RKGenericDevice.h in Headers */,
 				1992275F1B7F127000420C2C /* RKDevice+WiFi.h in Headers */,
@@ -382,6 +448,7 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				199227A81B7F1A6B00420C2C /* RKWLANChannel_private.h in Headers */,
 				1992275A1B7F11C000420C2C /* RKMobileDevice.h in Headers */,
 				1992276B1B7F142300420C2C /* RKMobileDevice_private.h in Headers */,
 				1992273B1B7F0EF600420C2C /* RouterKit.h in Headers */,
@@ -396,6 +463,24 @@
 				199227771B7F15DE00420C2C /* RKWLANChannel.h in Headers */,
 				199227661B7F137B00420C2C /* RKKWDB2600Device.h in Headers */,
 				199227541B7F106200420C2C /* if_arp.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		199227A11B7F1A2D00420C2C /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				199227AE1B7F1A7800420C2C /* RKKWFB2700Device.h in Headers */,
+				199227A51B7F1A4D00420C2C /* RKDevice+WiFi.h in Headers */,
+				199227A61B7F1A4D00420C2C /* RKWLANChannel.h in Headers */,
+				199227AA1B7F1A7300420C2C /* RKDevice_private.h in Headers */,
+				199227AD1B7F1A7800420C2C /* RKKWDB2600Device.h in Headers */,
+				199227A41B7F1A4D00420C2C /* RKGenericDevice.h in Headers */,
+				199227A71B7F1A4D00420C2C /* RKMobileDevice.h in Headers */,
+				199227A21B7F1A4D00420C2C /* RouterKit.h in Headers */,
+				199227A31B7F1A4D00420C2C /* RKDevice.h in Headers */,
+				199227AC1B7F1A7300420C2C /* RKMobileDevice_private.h in Headers */,
+				199227AB1B7F1A7300420C2C /* RKWLANChannel_private.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -476,6 +561,41 @@
 			productReference = 199227291B7F0EB400420C2C /* RouterKit-iOSTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
+		199227821B7F19FE00420C2C /* RouterKit-Static-iOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 199227941B7F19FE00420C2C /* Build configuration list for PBXNativeTarget "RouterKit-Static-iOS" */;
+			buildPhases = (
+				1992277F1B7F19FE00420C2C /* Sources */,
+				199227801B7F19FE00420C2C /* Frameworks */,
+				199227A11B7F1A2D00420C2C /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "RouterKit-Static-iOS";
+			productName = "RouterKit-Static-iOS";
+			productReference = 199227831B7F19FE00420C2C /* libRouterKit-Static-iOS.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		1992278C1B7F19FE00420C2C /* RouterKit-Static-iOSTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 199227971B7F19FE00420C2C /* Build configuration list for PBXNativeTarget "RouterKit-Static-iOSTests" */;
+			buildPhases = (
+				199227891B7F19FE00420C2C /* Sources */,
+				1992278A1B7F19FE00420C2C /* Frameworks */,
+				1992278B1B7F19FE00420C2C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				199227901B7F19FE00420C2C /* PBXTargetDependency */,
+			);
+			name = "RouterKit-Static-iOSTests";
+			productName = "RouterKit-Static-iOSTests";
+			productReference = 1992278D1B7F19FE00420C2C /* RouterKit-Static-iOSTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -495,6 +615,12 @@
 						CreatedOnToolsVersion = 6.4;
 					};
 					199227281B7F0EB400420C2C = {
+						CreatedOnToolsVersion = 6.4;
+					};
+					199227821B7F19FE00420C2C = {
+						CreatedOnToolsVersion = 6.4;
+					};
+					1992278C1B7F19FE00420C2C = {
 						CreatedOnToolsVersion = 6.4;
 					};
 				};
@@ -521,6 +647,8 @@
 				1992270A1B7F0EAB00420C2C /* RouterKit-MacTests */,
 				1992271E1B7F0EB400420C2C /* RouterKit-iOS */,
 				199227281B7F0EB400420C2C /* RouterKit-iOSTests */,
+				199227821B7F19FE00420C2C /* RouterKit-Static-iOS */,
+				1992278C1B7F19FE00420C2C /* RouterKit-Static-iOSTests */,
 			);
 		};
 /* End PBXProject section */
@@ -585,6 +713,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		1992278B1B7F19FE00420C2C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -634,6 +769,27 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		1992277F1B7F19FE00420C2C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				199227A01B7F1A2300420C2C /* RKKWFB2700Device.m in Sources */,
+				1992279F1B7F1A2300420C2C /* RKKWDB2600Device.m in Sources */,
+				1992279B1B7F1A2300420C2C /* RKGenericDevice.m in Sources */,
+				1992279C1B7F1A2300420C2C /* RKDevice+WiFi.m in Sources */,
+				1992279D1B7F1A2300420C2C /* RKWLANChannel.m in Sources */,
+				1992279E1B7F1A2300420C2C /* RKMobileDevice.m in Sources */,
+				1992279A1B7F1A1D00420C2C /* RKDevice.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		199227891B7F19FE00420C2C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -656,6 +812,11 @@
 			isa = PBXTargetDependency;
 			name = "SSKeychain iOS";
 			targetProxy = 199227431B7F0F1900420C2C /* PBXContainerItemProxy */;
+		};
+		199227901B7F19FE00420C2C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 199227821B7F19FE00420C2C /* RouterKit-Static-iOS */;
+			targetProxy = 1992278F1B7F19FE00420C2C /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -696,7 +857,8 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 10.8;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = macosx;
@@ -735,7 +897,8 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 10.8;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = macosx;
 				VERSIONING_SYSTEM = "apple-generic";
@@ -759,7 +922,6 @@
 				INFOPLIST_FILE = "RouterKit-Mac/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
-				MACOSX_DEPLOYMENT_TARGET = 10.11;
 				PRODUCT_NAME = RouterKit;
 				SKIP_INSTALL = YES;
 			};
@@ -777,7 +939,6 @@
 				INFOPLIST_FILE = "RouterKit-Mac/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
-				MACOSX_DEPLOYMENT_TARGET = 10.11;
 				PRODUCT_NAME = RouterKit;
 				SKIP_INSTALL = YES;
 			};
@@ -832,7 +993,6 @@
 				);
 				INFOPLIST_FILE = "RouterKit-iOS/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_NAME = RouterKit;
 				SDKROOT = iphoneos;
@@ -851,7 +1011,6 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = "RouterKit-iOS/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_NAME = RouterKit;
 				SDKROOT = iphoneos;
@@ -891,6 +1050,70 @@
 					"$(inherited)",
 				);
 				INFOPLIST_FILE = "RouterKit-iOSTests/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		199227951B7F19FE00420C2C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		199227961B7F19FE00420C2C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		199227981B7F19FE00420C2C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "RouterKit-Static-iOSTests/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		199227991B7F19FE00420C2C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "RouterKit-Static-iOSTests/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -940,6 +1163,22 @@
 			buildConfigurations = (
 				199227361B7F0EB500420C2C /* Debug */,
 				199227371B7F0EB500420C2C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		199227941B7F19FE00420C2C /* Build configuration list for PBXNativeTarget "RouterKit-Static-iOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				199227951B7F19FE00420C2C /* Debug */,
+				199227961B7F19FE00420C2C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		199227971B7F19FE00420C2C /* Build configuration list for PBXNativeTarget "RouterKit-Static-iOSTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				199227981B7F19FE00420C2C /* Debug */,
+				199227991B7F19FE00420C2C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 		};

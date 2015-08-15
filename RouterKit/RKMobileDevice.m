@@ -101,4 +101,53 @@
     return level;
 }
 
+- (void)startCheckSignal
+{
+    NSUInteger timeInterval = 10;
+    
+    while (self.generatingSignalNotificationsIsOn && [[NSRunLoop currentRunLoop] runMode:NSDefaultRunLoopMode beforeDate:[NSDate dateWithTimeIntervalSinceNow:timeInterval]]) {
+        [self checkSignal];
+    }
+}
+
+- (void)checkSignal
+{
+    if (self.lastSignalLevel != self.wwanSignalLevel) {
+        [[NSNotificationCenter defaultCenter] postNotificationName:nil object:nil userInfo:nil];
+    }
+}
+
+
+#pragma mark - CLLocationManagerDelegate
+
+- (void)locationManager:(CLLocationManager *)manager didUpdateLocations:(NSArray *)locations
+{
+    [self checkSignal];
+}
+
+@end
+
+@implementation RKMobileDevice (Notification)
+
+- (void)beginGeneratingSignalNotifications
+{
+    self.locationManager = [[CLLocationManager alloc] init];
+    self.locationManager.desiredAccuracy = kCLLocationAccuracyHundredMeters;
+    self.locationManager.delegate = self;
+    
+#if (__IPHONE_OS_VERSION_MAX_ALLOWED >= __IPHONE_6_0)
+    if ([CLLocationManager instancesRespondToSelector:@selector(pausesLocationUpdatesAutomatically)])
+        self.locationManager.pausesLocationUpdatesAutomatically = YES;
+#endif
+    
+    [self.locationManager startUpdatingLocation];
+    
+    self.generatingSignalNotificationsIsOn = YES;
+}
+
+- (void)endGeneratingSignalNotifications
+{
+    
+}
+
 @end

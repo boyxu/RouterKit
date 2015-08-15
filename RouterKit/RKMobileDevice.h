@@ -29,7 +29,7 @@ typedef NS_ENUM(NSInteger, RKMobileDeviceBatteryState) {
 
 @end
 
-@interface RKMobileDevice (Notification) <CLLocationManagerDelegate>
+@interface RKMobileDevice (Notification)
 
 - (void)beginGeneratingSignalNotifications;
 - (void)endGeneratingSignalNotifications;

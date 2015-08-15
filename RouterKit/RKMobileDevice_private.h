@@ -9,7 +9,7 @@
 #import <RouterKit/RKMobileDevice.h>
 #import <RouterKit/RKDevice_private.h>
 
-@interface RKMobileDevice ()
+@interface RKMobileDevice () <CLLocationManagerDelegate>
 
 @property (nonatomic, retain) CLLocationManager *locationManager;
 @property (nonatomic) BOOL generatingSignalNotificationsIsOn;

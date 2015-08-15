@@ -8,9 +8,7 @@
 
 #import "RKGenericDevice.h"
 
-#if !TARGET_OS_IPHONE
-@import CoreWLAN;
-#endif
+#import "RKDevice+WiFi.h"
 
 #import "RKDevice_private.h"
 
@@ -33,25 +31,6 @@
         self.model = @"Unknown";
     }
     return self;
-}
-
-- (NSString *)SSID
-{
-    NSString *ssid = nil;
-    
-#if !TARGET_OS_IPHONE
-    CWInterface *interface = [CWInterface interface];
-    
-    if (interface && ![interface.ssid isEqualToString:@""])
-        ssid = interface.ssid;
-#endif
-    
-    return ssid;
-}
-
-- (void)setSSID:(NSString *)SSID
-{
-    
 }
 
 @end
