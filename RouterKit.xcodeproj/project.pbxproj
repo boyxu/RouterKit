@@ -61,6 +61,7 @@
 			children = (
 				192C57211B7F0B8C00240688 /* RouterKit */,
 				192C572E1B7F0B8C00240688 /* RouterKitTests */,
+				199226E71B7F0D8600420C2C /* Frameworks */,
 				192C57201B7F0B8C00240688 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -109,6 +110,13 @@
 				192C57301B7F0B8C00240688 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		199226E71B7F0D8600420C2C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
