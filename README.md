@@ -3,6 +3,8 @@
 
 Router Status/Control Framework for iOS/Mac which used in [iEGG](http://www.sinoru.me/app/iegg).
 
+한국어 설명을 원하신다면 [여기](https://github.com/sinoru/RouterKit/blob/master/README.ko.md)를 눌러주세요.
+
 ## Installation
 ### Manually
 1. Drag `RouterKit.xcodeproj` file into you project
@@ -10,6 +12,6 @@ Router Status/Control Framework for iOS/Mac which used in [iEGG](http://www.sino
 
 ## Suported Device
 ### Mobile Router
-#### Wibro Router
+#### WiMax/Wibro Router
 * KWF-B2700 (a.k.a Compact EGG)
 * KWD-B2600 (a.k.a Strong EGG)
