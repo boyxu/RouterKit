@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		195677851B80A07D0043724F /* RKDevice+WWAN.h in Headers */ = {isa = PBXBuildFile; fileRef = 195677831B80A07D0043724F /* RKDevice+WWAN.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		195677861B80A07D0043724F /* RKDevice+WWAN.h in Headers */ = {isa = PBXBuildFile; fileRef = 195677831B80A07D0043724F /* RKDevice+WWAN.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		195677871B80A07D0043724F /* RKDevice+WWAN.h in Headers */ = {isa = PBXBuildFile; fileRef = 195677831B80A07D0043724F /* RKDevice+WWAN.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		195677881B80A07D0043724F /* RKDevice+WWAN.m in Sources */ = {isa = PBXBuildFile; fileRef = 195677841B80A07D0043724F /* RKDevice+WWAN.m */; };
+		195677891B80A07D0043724F /* RKDevice+WWAN.m in Sources */ = {isa = PBXBuildFile; fileRef = 195677841B80A07D0043724F /* RKDevice+WWAN.m */; };
+		1956778A1B80A07D0043724F /* RKDevice+WWAN.m in Sources */ = {isa = PBXBuildFile; fileRef = 195677841B80A07D0043724F /* RKDevice+WWAN.m */; };
 		1992270C1B7F0EAB00420C2C /* RouterKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 199227011B7F0EAB00420C2C /* RouterKit.framework */; };
 		199227131B7F0EAB00420C2C /* RouterKit_MacTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 199227121B7F0EAB00420C2C /* RouterKit_MacTests.m */; };
 		1992272A1B7F0EB400420C2C /* RouterKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1992271F1B7F0EB400420C2C /* RouterKit.framework */; };
@@ -144,6 +150,8 @@
 
 /* Begin PBXFileReference section */
 		192C57241B7F0B8C00240688 /* RouterKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RouterKit.h; sourceTree = "<group>"; };
+		195677831B80A07D0043724F /* RKDevice+WWAN.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "RKDevice+WWAN.h"; sourceTree = "<group>"; };
+		195677841B80A07D0043724F /* RKDevice+WWAN.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "RKDevice+WWAN.m"; sourceTree = "<group>"; };
 		199226E01B7F0C6100420C2C /* RKDevice.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RKDevice.h; sourceTree = "<group>"; };
 		199226E11B7F0C6100420C2C /* RKDevice.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RKDevice.m; sourceTree = "<group>"; };
 		199226E41B7F0CAB00420C2C /* RKDevice_private.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RKDevice_private.h; sourceTree = "<group>"; };
@@ -275,6 +283,8 @@
 				199227741B7F15DE00420C2C /* RKWLANChannel.h */,
 				1992277A1B7F162500420C2C /* RKWLANChannel_private.h */,
 				199227751B7F15DE00420C2C /* RKWLANChannel.m */,
+				195677831B80A07D0043724F /* RKDevice+WWAN.h */,
+				195677841B80A07D0043724F /* RKDevice+WWAN.m */,
 				1992276C1B7F146A00420C2C /* Mobile */,
 				192C57221B7F0B8C00240688 /* Supporting Files */,
 			);
@@ -440,6 +450,7 @@
 				199227591B7F11C000420C2C /* RKMobileDevice.h in Headers */,
 				1992276A1B7F142300420C2C /* RKMobileDevice_private.h in Headers */,
 				1992273A1B7F0EF600420C2C /* RKDevice_private.h in Headers */,
+				195677851B80A07D0043724F /* RKDevice+WWAN.h in Headers */,
 				199227651B7F137B00420C2C /* RKKWDB2600Device.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -462,6 +473,7 @@
 				199227561B7F106200420C2C /* if_ether.h in Headers */,
 				199227771B7F15DE00420C2C /* RKWLANChannel.h in Headers */,
 				199227661B7F137B00420C2C /* RKKWDB2600Device.h in Headers */,
+				195677861B80A07D0043724F /* RKDevice+WWAN.h in Headers */,
 				199227541B7F106200420C2C /* if_arp.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -480,6 +492,7 @@
 				199227A21B7F1A4D00420C2C /* RouterKit.h in Headers */,
 				199227A31B7F1A4D00420C2C /* RKDevice.h in Headers */,
 				199227AC1B7F1A7300420C2C /* RKMobileDevice_private.h in Headers */,
+				195677871B80A07D0043724F /* RKDevice+WWAN.h in Headers */,
 				199227AB1B7F1A7300420C2C /* RKWLANChannel_private.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -730,6 +743,7 @@
 				199227781B7F15DE00420C2C /* RKWLANChannel.m in Sources */,
 				1992274A1B7F0F6000420C2C /* RKGenericDevice.m in Sources */,
 				199227611B7F127000420C2C /* RKDevice+WiFi.m in Sources */,
+				195677881B80A07D0043724F /* RKDevice+WWAN.m in Sources */,
 				1992275B1B7F11C000420C2C /* RKMobileDevice.m in Sources */,
 				199227671B7F137B00420C2C /* RKKWDB2600Device.m in Sources */,
 				1992273E1B7F0F0500420C2C /* RKDevice.m in Sources */,
@@ -753,6 +767,7 @@
 				199227791B7F15DE00420C2C /* RKWLANChannel.m in Sources */,
 				1992274B1B7F0F6000420C2C /* RKGenericDevice.m in Sources */,
 				199227621B7F127000420C2C /* RKDevice+WiFi.m in Sources */,
+				195677891B80A07D0043724F /* RKDevice+WWAN.m in Sources */,
 				1992275C1B7F11C000420C2C /* RKMobileDevice.m in Sources */,
 				199227681B7F137B00420C2C /* RKKWDB2600Device.m in Sources */,
 				1992273F1B7F0F0600420C2C /* RKDevice.m in Sources */,
@@ -776,6 +791,7 @@
 				199227A01B7F1A2300420C2C /* RKKWFB2700Device.m in Sources */,
 				1992279F1B7F1A2300420C2C /* RKKWDB2600Device.m in Sources */,
 				1992279B1B7F1A2300420C2C /* RKGenericDevice.m in Sources */,
+				1956778A1B80A07D0043724F /* RKDevice+WWAN.m in Sources */,
 				1992279C1B7F1A2300420C2C /* RKDevice+WiFi.m in Sources */,
 				1992279D1B7F1A2300420C2C /* RKWLANChannel.m in Sources */,
 				1992279E1B7F1A2300420C2C /* RKMobileDevice.m in Sources */,

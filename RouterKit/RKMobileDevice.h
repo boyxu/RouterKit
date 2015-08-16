@@ -8,6 +8,7 @@
 
 #import <RouterKit/RKDevice.h>
 #import <RouterKit/RKDevice+WiFi.h>
+#import <RouterKit/RKDevice+WWAN.h>
 
 @import CoreLocation;
 
@@ -22,10 +23,6 @@ typedef NS_ENUM(NSInteger, RKMobileDeviceBatteryState) {
 
 @property (nonatomic, readonly) RKMobileDeviceBatteryState batteryState;
 @property (nonatomic, readonly) float batteryLevel;
-@property (nonatomic, readonly) NSUInteger wwanSignalLevel;
-@property (nonatomic, readonly) NSString *wwanCarrierName;
-@property (nonatomic, readonly) NSInteger wwanRSSI;
-@property (nonatomic, readonly) NSInteger wwanCINR;
 
 @end
 
